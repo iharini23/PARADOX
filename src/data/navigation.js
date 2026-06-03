@@ -1,9 +1,9 @@
 export const navigationLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'Portfolio', path: '/portfolio' },
-  { label: 'Case Studies', path: '/case-studies' },
-  { label: 'Testimonials', path: '/testimonials' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Home', path: '#home' },
+  { label: 'Why Us', path: '#why-us' },
+  { label: 'Our Results', path: '#results' },
+  { label: 'Services', path: '#services' },
+  { label: 'What\'s Included', path: '#included' },
+  { label: 'Meet Rohan', path: '#team' },
+  { label: 'Get Access', path: '#contact' },
 ];

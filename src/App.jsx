@@ -1,6 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import AppRoutes from './routes/AppRoutes';
+import Home from './pages/Home';
+import MainLayout from './layouts/MainLayout';
 import LoadingScreen from './components/LoadingScreen';
 
 export default function App() {
@@ -13,7 +14,13 @@ export default function App() {
 
   return (
     <AnimatePresence mode="wait">
-      {loading ? <LoadingScreen key="loader" /> : <AppRoutes key="routes" />}
+      {loading ? (
+        <LoadingScreen key="loader" />
+      ) : (
+        <MainLayout key="layout">
+          <Home />
+        </MainLayout>
+      )}
     </AnimatePresence>
   );
 }

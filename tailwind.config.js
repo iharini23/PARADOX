@@ -4,19 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Logo-driven palette (warm red + cool blue)
-        primary: '#E03A3A',
-        secondary: '#1E90FF',
-        dark: '#071022',
-        surface: 'rgba(7, 16, 34, 0.72)',
+        primary: '#046bd2',
+        secondary: '#045cb4',
+        accent: '#0050a3',
+        dark: '#0f172a',
+        light: '#f9fafb',
+        border: '#e2e8f0',
       },
       fontFamily: {
-        body: ['Manrope', 'sans-serif'],
-        display: ['Space Grotesk', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        display: ['Inter', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 0 45px rgba(224,58,58,0.18), 0 0 60px rgba(30,144,255,0.10)',
-        cyan: '0 0 45px rgba(30,144,255,0.18)',
+        glow: '0 0 45px rgba(4,107,210,0.12)',
+        cyan: '0 0 45px rgba(4,107,210,0.18)',
       },
       keyframes: {
         float: {
@@ -34,7 +35,7 @@ export default {
       },
       backgroundImage: {
         'radial-glow':
-          'radial-gradient(circle at top left, rgba(224,58,58,0.14), transparent 35%), radial-gradient(circle at top right, rgba(30,144,255,0.12), transparent 30%)',
+          'radial-gradient(circle at top left, rgba(4,107,210,0.06), transparent 35%), radial-gradient(circle at top right, rgba(4,107,210,0.04), transparent 30%)',
       },
     },
   },

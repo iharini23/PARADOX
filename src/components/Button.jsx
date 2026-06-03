@@ -1,25 +1,16 @@
-import { Link } from 'react-router-dom';
-
 const variants = {
-  primary: 'bg-gradient-to-r from-primary to-secondary text-white shadow-glow hover:shadow-cyan',
-  secondary: 'border border-white/15 bg-white/5 text-white hover:border-secondary/50 hover:bg-white/10',
-  ghost: 'text-slate-200 hover:bg-white/5 hover:text-white',
+  primary: 'bg-primary text-white hover:bg-secondary shadow-md shadow-primary/15 hover:shadow-lg hover:shadow-primary/20',
+  secondary: 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:border-slate-300',
+  ghost: 'text-primary hover:bg-primary/5 hover:text-secondary',
 };
 
 export default function Button({ to, href, variant = 'primary', className = '', children, ...props }) {
-  const base = `inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 ${variants[variant]} ${className}`;
+  const base = `inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 ${variants[variant]} ${className}`;
+  const target = href || to;
 
-  if (to) {
+  if (target) {
     return (
-      <Link to={to} className={base} {...props}>
-        {children}
-      </Link>
-    );
-  }
-
-  if (href) {
-    return (
-      <a href={href} className={base} {...props}>
+      <a href={target} className={base} {...props}>
         {children}
       </a>
     );

@@ -1,8 +1,6 @@
 import { Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Logo from './Logo';
 import { navigationLinks } from '../data/navigation';
-import { services } from '../data/services';
+import Logo from './Logo';
 
 const socialLinks = [
   { icon: Instagram, label: 'Instagram', href: '#' },
@@ -13,14 +11,17 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-slate-950/80">
-      <div className="section-shell section-spacing grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+    <footer className="bg-slate-950 text-slate-400 border-t border-slate-900">
+      <div className="section-shell py-16 grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr] items-start">
         <div className="space-y-6">
+          {/* Render our clean Logo component with the new branding */}
           <Logo />
-          <p className="max-w-md text-sm leading-7 text-slate-300">
-            PARADOX crafts premium digital marketing experiences for brands that want to move faster, look sharper, and grow with intention.
+
+          <p className="max-w-md text-sm leading-relaxed text-slate-400">
+            PARADOX (operated by House of Roas LLP) is a conversion-focused performance marketing agency. We design, script, write, and manage high-ROI acquisition systems.
           </p>
-          <div className="flex flex-wrap gap-3">
+
+          <div className="flex flex-wrap gap-2.5">
             {socialLinks.map((social) => {
               const Icon = social.icon;
               return (
@@ -28,7 +29,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-secondary/50 hover:bg-secondary/10"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-400 transition hover:border-primary/50 hover:bg-primary/10 hover:text-white"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -38,39 +39,33 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-secondary">Quick Links</h3>
-          <ul className="space-y-3 text-sm text-slate-300">
+          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-5">Quick Navigation</h3>
+          <ul className="space-y-3 text-sm font-semibold">
             {navigationLinks.map((link) => (
               <li key={link.path}>
-                <Link className="transition hover:text-white" to={link.path}>
+                <a className="transition hover:text-white" href={link.path}>
                   {link.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
         </div>
 
         <div>
-          <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-secondary">Services</h3>
-          <ul className="space-y-3 text-sm text-slate-300">
-            {services.slice(0, 5).map((service) => (
-              <li key={service.title}>{service.title}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="space-y-4">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.25em] text-secondary">Agency</h3>
-          <p className="text-sm leading-7 text-slate-300">
-            Future-ready setup for upcoming backend, admin dashboard, project management, and contact API integration.
+          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-5">Our Philosophy</h3>
+          <p className="text-sm leading-relaxed text-slate-400">
+            We operate under a simple principle: generate more value than we charge. No lock-in, fully attribution-audited campaigns.
           </p>
+          <div className="mt-4 p-4 rounded-xl border border-white/5 bg-white/5 text-xs text-slate-500 leading-relaxed">
+            LLP Registration: House of Roas LLP. Gurugram, Haryana.
+          </div>
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="section-shell flex flex-col gap-3 py-5 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>Copyright {new Date().getFullYear()} PARADOX. All rights reserved.</p>
-          <p>Built for a premium digital marketing experience.</p>
+      <div className="border-t border-white/5 py-6 bg-slate-950">
+        <div className="section-shell flex flex-col gap-3 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>Copyright &copy; {new Date().getFullYear()} | PARADOX (House of Roas LLP). All rights reserved.</p>
+          <p>Modeled after impactxl.in design system.</p>
         </div>
       </div>
     </footer>

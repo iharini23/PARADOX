@@ -1,13 +1,12 @@
 # PARADOX
 
-Logo: To use your provided PARADOX logo image, place the file named `paradox-logo.png` at the project root so it is served at `/paradox-logo.png` (or put it in `public/paradox-logo.png`). The app will automatically use this image in the header and footer. If the image is missing, the previous Sparkles fallback will display.
+Single-page portfolio site built with React and Vite. The project now focuses on one scrolling landing page with anchor navigation, selected work, skills, testimonials, and contact details.
 
-Premium, responsive React frontend for a digital marketing agency.
+Logo: To use your provided PARADOX logo image, place the file named `PARADOX_LOGO1.png` in `public/` so it is served at `/PARADOX_LOGO1.png`. If the image is missing, the Sparkles fallback will display.
 
 ## Stack
 
 - React 18
-- React Router
 - Tailwind CSS
 - Framer Motion
 - Vite
@@ -20,4 +19,4 @@ Premium, responsive React frontend for a digital marketing agency.
 
 ## Structure
 
-The app is organized for future backend integration with dedicated folders for `services`, `data`, `hooks`, `routes`, `layouts`, `components`, `pages`, and `styles`.
+The app keeps the existing folder structure, but the visible experience is now a single-page portfolio driven from `src/pages/Home.jsx`.
