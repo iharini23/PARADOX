@@ -4,6 +4,6 @@ export const navigationLinks = [
   { label: 'Our Results', path: '#results' },
   { label: 'Services', path: '#services' },
   { label: 'What\'s Included', path: '#included' },
-  { label: 'Meet Rohan', path: '#team' },
+  { label: 'Meet SUJITHA', path: '#team' },
   { label: 'Get Access', path: '#contact' },
 ];

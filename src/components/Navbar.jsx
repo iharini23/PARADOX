@@ -6,15 +6,29 @@ import Button from './Button';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setOpen(false);
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md">
-      <div className="section-shell flex h-20 items-center justify-between">
-        <a href="#home" aria-label="PARADOX home">
+    <header
+      className={`fixed left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-6xl rounded-2xl border backdrop-blur-xl transition-all duration-300 ${
+        scrolled
+          ? 'top-3 bg-white/90 border-slate-200/80 shadow-xl shadow-slate-200/20 py-2.5'
+          : 'top-6 bg-white/75 border-slate-200/50 shadow-lg shadow-slate-100/10 py-3.5'
+      }`}
+    >
+      <div className="mx-auto w-full px-6 flex h-12 items-center justify-between">
+        <a href="#home" aria-label="PARADOX home" className="transition-transform duration-200 hover:scale-[1.02]">
           <Logo />
         </a>
 
@@ -23,7 +37,7 @@ export default function Navbar() {
             <a
               key={link.path}
               href={link.path}
-              className="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-100 hover:text-primary"
+              className="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition-all duration-200 hover:bg-slate-100/80 hover:text-primary"
             >
               {link.label}
             </a>
@@ -31,14 +45,14 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#contact" className="px-5 py-2 text-xs uppercase tracking-wider font-bold">
+          <Button href="#contact" className="px-5 py-2.5 text-xs uppercase tracking-wider font-bold shadow-sm">
             Get Access
           </Button>
         </div>
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/80 bg-white/80 text-slate-700 hover:bg-slate-50 lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label="Toggle navigation menu"
         >
@@ -46,8 +60,14 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className={`${open ? 'max-h-screen border-t border-slate-100 bg-white shadow-lg' : 'max-h-0'} overflow-hidden transition-all duration-300 lg:hidden`}>
-        <div className="section-shell flex flex-col gap-1 py-4">
+      <div
+        className={`${
+          open
+            ? 'max-h-screen border-t border-slate-100/80 mt-3 bg-white/95 rounded-b-2xl shadow-inner'
+            : 'max-h-0'
+        } overflow-hidden transition-all duration-300 lg:hidden`}
+      >
+        <div className="flex flex-col gap-1 px-6 py-4">
           {navigationLinks.map((link) => (
             <a
               key={link.path}

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 
 function ScrollTopOnMount() {
@@ -21,7 +20,6 @@ export default function MainLayout({ children }) {
       <div className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 rounded-full bg-secondary/5 blur-3xl" />
 
       <ScrollTopOnMount />
-      <Navbar />
 
       <AnimatePresence mode="wait">
         <motion.main

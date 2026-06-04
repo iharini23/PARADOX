@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#046bd2',
-        secondary: '#045cb4',
-        accent: '#0050a3',
+        primary: '#931521',
+        secondary: '#0F53B8',
+        accent: '#0C3994',
         dark: '#0f172a',
         light: '#f9fafb',
         border: '#e2e8f0',
@@ -16,8 +16,8 @@ export default {
         display: ['Inter', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 0 45px rgba(4,107,210,0.12)',
-        cyan: '0 0 45px rgba(4,107,210,0.18)',
+        glow: '0 0 45px rgba(147,21,33,0.12)',
+        cyan: '0 0 45px rgba(15,83,184,0.18)',
       },
       keyframes: {
         float: {
@@ -35,7 +35,7 @@ export default {
       },
       backgroundImage: {
         'radial-glow':
-          'radial-gradient(circle at top left, rgba(4,107,210,0.06), transparent 35%), radial-gradient(circle at top right, rgba(4,107,210,0.04), transparent 30%)',
+          'radial-gradient(circle at top left, rgba(147,21,33,0.06), transparent 35%), radial-gradient(circle at top right, rgba(15,83,184,0.04), transparent 30%)',
       },
     },
   },

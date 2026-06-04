@@ -1,3 +1,4 @@
+/* Brand Theme Rebrand */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -17,8 +18,8 @@ body {
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   background-image:
-    radial-gradient(circle at top left, rgba(4, 107, 210, 0.04), transparent 32%),
-    radial-gradient(circle at top right, rgba(4, 107, 210, 0.03), transparent 28%),
+    radial-gradient(circle at top left, rgba(147, 21, 33, 0.04), transparent 32%),
+    radial-gradient(circle at top right, rgba(15, 83, 184, 0.03), transparent 28%),
     linear-gradient(180deg, #ffffff 0%, #f9fafb 50%, #ffffff 100%);
 }
 
@@ -27,8 +28,8 @@ body {
 }
 
 ::selection {
-  background: rgba(4, 107, 210, 0.15);
-  color: #046bd2;
+  background: rgba(147, 21, 33, 0.15);
+  color: #931521;
 }
 
 @layer base {

@@ -17,7 +17,7 @@ export const portfolioProjects = [
     technologies: ['Meta Ads', 'Figma', 'Motion Graphics', 'SEO'],
     client: 'Aster Labs',
     results: 'Raised qualified leads by 214% in eight weeks.',
-    image: createProjectImage('Neon Commerce Launch', '#6C63FF'),
+    image: createProjectImage('Neon Commerce Launch', '#0F53B8'),
   },
   {
     title: 'Creator Growth Engine',
@@ -26,7 +26,7 @@ export const portfolioProjects = [
     technologies: ['Content Strategy', 'Copywriting', 'Notion', 'Analytics'],
     client: 'Northstack',
     results: 'Increased organic impressions by 3.8x.',
-    image: createProjectImage('Creator Growth Engine', '#00D4FF'),
+    image: createProjectImage('Creator Growth Engine', '#931521'),
   },
   {
     title: 'Motion-First Launch Film',
@@ -35,7 +35,7 @@ export const portfolioProjects = [
     technologies: ['After Effects', 'Premiere Pro', 'Sound Design'],
     client: 'Volt Studio',
     results: 'Improved video completion rates by 47%.',
-    image: createProjectImage('Motion-First Launch Film', '#8B5CF6'),
+    image: createProjectImage('Motion-First Launch Film', '#0C3994'),
   },
   {
     title: 'Social Presence Rebuild',
@@ -44,7 +44,7 @@ export const portfolioProjects = [
     technologies: ['Instagram', 'LinkedIn', 'Canva', 'Scheduling Stack'],
     client: 'Studio Layer',
     results: 'Monthly engagement grew by 190%.',
-    image: createProjectImage('Social Presence Rebuild', '#0EA5E9'),
+    image: createProjectImage('Social Presence Rebuild', '#76101E'),
   },
   {
     title: 'Brand Identity Refresh',
@@ -53,7 +53,7 @@ export const portfolioProjects = [
     technologies: ['Brand Guidelines', 'Typography', 'Identity Design'],
     client: 'Pulse Drive',
     results: 'Delivered a premium repositioning for new market entry.',
-    image: createProjectImage('Brand Identity Refresh', '#22C55E'),
+    image: createProjectImage('Brand Identity Refresh', '#0F53B8'),
   },
   {
     title: 'Authority SEO Sprint',
@@ -62,6 +62,6 @@ export const portfolioProjects = [
     technologies: ['Technical SEO', 'Keyword Research', 'Content Clusters'],
     client: 'Nova Health',
     results: 'Organic conversions grew by 138%.',
-    image: createProjectImage('Authority SEO Sprint', '#F97316'),
+    image: createProjectImage('Authority SEO Sprint', '#931521'),
   },
 ];

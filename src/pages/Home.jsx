@@ -52,91 +52,41 @@ export default function Home() {
   return (
     <div className="home-theme">
       {/* 1. Hero Section */}
-      <section id="home" className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden py-16 lg:py-24">
-        <div className="section-shell relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
+      <section id="home" className="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden py-20 lg:py-28">
+        <div className="section-shell relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
+          {/* Logo Card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8 flex h-24 w-24 items-center justify-center rounded-2xl bg-white p-4 shadow-md border border-slate-100"
+          >
+            <img src="/PARADOX_LOGO1.png" alt="PARADOX logo" className="h-full w-full object-contain" />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col items-center"
           >
             <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
               <Sparkles className="h-3.5 w-3.5" /> Performance Meta Ads Agency
             </span>
-            <h1 className="mt-6 text-5xl font-extrabold leading-[1.1] text-slate-900 sm:text-6xl lg:text-7xl tracking-tight">
+            <h1 className="mt-8 text-5xl font-extrabold leading-[1.1] text-slate-900 sm:text-6xl lg:text-7xl tracking-tight max-w-3xl">
               IMPACTFUL ADS.<br />
-              <span className="text-primary bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">KILLER RESULTS.</span>
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">KILLER RESULTS.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl">
               We make our clients a ton of money through Meta ads that steal the show and minimalist campaign structures that scale sustainably.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="#contact" variant="primary" className="px-7 py-4 text-base font-bold">
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Button href="#contact" variant="primary" className="px-7 py-4 text-base font-bold shadow-md">
                 Get Free Case Study <ArrowRight className="h-5 w-5" />
               </Button>
               <Button href="#why-us" variant="secondary" className="px-7 py-4 text-base font-bold">
                 What Makes Us Different
               </Button>
-            </div>
-          </motion.div>
-
-          {/* Interactive Visual Element */}
-          <motion.div
-            className="relative flex justify-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 h-40 w-40 bg-primary/5 rounded-full blur-3xl -z-10" />
-              <div className="flex items-center justify-between pb-6 border-b border-slate-100">
-                <div>
-                  <h3 className="text-base font-bold text-slate-900">Campaign Monitor</h3>
-                  <p className="text-xs text-slate-500">Live acquisition funnel data</p>
-                </div>
-                <div className="rounded-full bg-emerald-50 border border-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-600 flex items-center gap-1 animate-pulse">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500" /> Active Scaling
-                </div>
-              </div>
-
-              <div className="mt-6 space-y-4">
-                <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-                  <div className="flex items-center gap-3">
-                    <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                      <TrendingUp className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-slate-500">ROAS Average</p>
-                      <p className="text-lg font-bold text-slate-900">4.1x</p>
-                    </div>
-                  </div>
-                  <span className="text-xs font-bold text-emerald-500 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5">+45%</span>
-                </div>
-
-                <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-100">
-                  <div className="flex items-center gap-3">
-                    <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                      <Users className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-slate-500">Acquisition Cost (CPR)</p>
-                      <p className="text-lg font-bold text-slate-900">₹320</p>
-                    </div>
-                  </div>
-                  <span className="text-xs font-bold text-emerald-500 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5">-30%</span>
-                </div>
-
-                {/* Progress bar */}
-                <div className="pt-2">
-                  <div className="flex justify-between text-xs font-semibold text-slate-500 mb-1">
-                    <span>Ad CTR Level</span>
-                    <span>Industry Avg (1.0%) vs Ours (2.1%)</span>
-                  </div>
-                  <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden flex">
-                    <div className="h-full bg-slate-300 w-[45%]" />
-                    <div className="h-full bg-primary w-[55%]" />
-                  </div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -196,7 +146,7 @@ export default function Home() {
 
       {/* 3. Callout Banner Section */}
       <section className="bg-slate-900 text-white py-20 overflow-hidden relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#046bd2_0%,transparent_60%)] opacity-35" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,#0F53B8_0%,transparent_60%)] opacity-35" />
         <div className="section-shell relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -207,7 +157,7 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.25em] font-bold text-primary mb-3">Our Core Philosophy</p>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white max-w-4xl mx-auto uppercase">
               ADVERTISING IS NOT MAGIC,<br />
-              <span className="text-primary bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">IT'S CAUSE AND EFFECT.</span>
+              <span className="text-primary bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">IT'S CAUSE AND EFFECT.</span>
             </h2>
           </motion.div>
         </div>
@@ -250,7 +200,7 @@ export default function Home() {
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 transition-all duration-300 hover:bg-white hover:shadow-md"
+                className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 transition-all duration-300 hover:bg-white hover:border-primary/25 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-2"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -308,7 +258,7 @@ export default function Home() {
               transition={{ duration: 0.2 }}
             >
               <div>
-                <span className="text-xs font-bold text-indigo-600 uppercase bg-indigo-50 border border-indigo-100 rounded-full px-3.5 py-1">
+                <span className="text-xs font-bold text-secondary uppercase bg-secondary/5 border border-secondary/10 rounded-full px-3.5 py-1">
                   Ad Creative & Copy Only
                 </span>
                 <h3 className="text-2xl font-bold text-slate-900 mt-5">All things Ad Creatives</h3>
@@ -394,7 +344,7 @@ export default function Home() {
             {/* Package 2 */}
             <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
               <h3 className="text-2xl font-bold text-slate-900 pb-4 border-b border-slate-100 flex items-center gap-2">
-                <CheckCircle2 className="h-6 w-6 text-indigo-600 flex-shrink-0" /> All things Ad Creatives
+                <CheckCircle2 className="h-6 w-6 text-secondary flex-shrink-0" /> All things Ad Creatives
               </h3>
               <div className="mt-6 space-y-6">
                 {[
@@ -456,17 +406,19 @@ export default function Home() {
           <div className="max-w-3xl mx-auto rounded-3xl border border-slate-200 bg-white p-8 md:p-10 shadow-sm">
             <div className="grid gap-8 md:grid-cols-[150px_1fr] items-center">
               <div className="flex justify-center">
-                <div className="h-28 w-28 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-3xl font-extrabold shadow-sm">
-                  RS
-                </div>
+                <img
+                  src="/sujitha.jpg"
+                  alt="SUJITHA MURUGAN"
+                  className="h-28 w-28 rounded-full object-cover border-2 border-primary/20 shadow-md"
+                />
               </div>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">Rohan Sapra</h3>
+                  <h3 className="text-xl font-bold text-slate-900">SUJITHA MURUGAN</h3>
                   <p className="text-xs font-bold text-primary uppercase mt-1">Founder & Performance Director</p>
                 </div>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Rohan is an online advertising expert who has documented success stories across 14+ different niches. After personally generating over ₹1 Crore within 15 months from a single digital product funnel, Rohan co-founded House of Roas LLP (operating as PARADOX) to execute these identical, battle-tested strategies for other course creators, coaches, and high-ticket service providers.
+                  Sujitha is an online advertising expert who has documented success stories across 14+ different niches. After personally generating over ₹1 Crore within 15 months from a single digital product funnel, Sujitha co-founded House of Roas LLP (operating as PARADOX) to execute these identical, battle-tested strategies for other course creators, coaches, and high-ticket service providers.
                 </p>
                 <div className="flex gap-4 text-xs font-bold text-slate-400">
                   <span className="flex items-center gap-1">✓ 14+ Niches Served</span>
@@ -475,6 +427,81 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 7.5 Live Monitor Section */}
+      <section className="bg-slate-50 border-b border-slate-200/50 pb-20 sm:pb-28">
+        <div className="section-shell max-w-xl mx-auto flex flex-col items-center">
+          <div className="text-center max-w-md mx-auto mb-10">
+            <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+              Live Funnel Data
+            </h2>
+            <p className="mt-2 text-sm text-slate-500">
+              A real-time snapshot of the campaign performance patterns we monitor and optimize daily.
+            </p>
+          </div>
+
+          <motion.div
+            className="w-full relative flex justify-center"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 h-40 w-40 bg-primary/5 rounded-full blur-3xl -z-10" />
+              <div className="flex items-center justify-between pb-6 border-b border-slate-100">
+                <div>
+                  <h3 className="text-base font-bold text-slate-900">Campaign Monitor</h3>
+                  <p className="text-xs text-slate-500">Live acquisition funnel data</p>
+                </div>
+                <div className="rounded-full bg-emerald-50 border border-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-600 flex items-center gap-1 animate-pulse">
+                  <span className="h-2 w-2 rounded-full bg-emerald-500" /> Active Scaling
+                </div>
+              </div>
+
+              <div className="mt-6 space-y-4">
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                      <TrendingUp className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-slate-500">ROAS Average</p>
+                      <p className="text-lg font-bold text-slate-900">4.1x</p>
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold text-emerald-500 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5">+45%</span>
+                </div>
+
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                      <Users className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-slate-500">Acquisition Cost (CPR)</p>
+                      <p className="text-lg font-bold text-slate-900">₹320</p>
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold text-emerald-500 bg-emerald-50 border border-emerald-100 rounded-full px-2 py-0.5">-30%</span>
+                </div>
+
+                {/* Progress bar */}
+                <div className="pt-2">
+                  <div className="flex justify-between text-xs font-semibold text-slate-500 mb-1">
+                    <span>Ad CTR Level</span>
+                    <span>Industry Avg (1.0%) vs Ours (2.1%)</span>
+                  </div>
+                  <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden flex">
+                    <div className="h-full bg-slate-300 w-[45%]" />
+                    <div className="h-full bg-primary w-[55%]" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

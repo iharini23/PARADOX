@@ -1,3 +1,4 @@
+// Rebranded Theme
 import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Home from './pages/Home';
