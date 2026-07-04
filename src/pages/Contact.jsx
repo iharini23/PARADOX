@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Instagram, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from 'lucide-react';
 import GlassCard from '../components/GlassCard';
 import SectionHeading from '../components/SectionHeading';
+import Button from '../components/Button';
 import usePageMetadata from '../hooks/usePageMetadata';
 import { submitContactForm } from '../services/agencyApi';
 
@@ -81,13 +82,14 @@ export default function Contact() {
               value={form.message}
               onChange={(event) => setForm({ ...form, message: event.target.value })}
             />
-            <button
+            <Button
               type="submit"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-secondary px-6 py-3 text-sm font-medium text-white shadow-glow transition hover:-translate-y-0.5"
+              variant="primary"
               disabled={status.type === 'loading'}
+              className="w-full"
             >
               {status.type === 'loading' ? 'Sending...' : 'Submit Inquiry'}
-            </button>
+            </Button>
             {status.message ? (
               <p className={`text-sm ${status.type === 'error' ? 'text-red-300' : 'text-secondary'}`}>{status.message}</p>
             ) : null}
@@ -100,11 +102,11 @@ export default function Contact() {
             <div className="mt-5 space-y-4 text-sm text-slate-300">
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-secondary" />
-                hello@paradox.agency
+                sujithamurugan17@gmail.com
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-secondary" />
-                +1 (555) 014-2200
+                +91 8072042580
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-secondary" />

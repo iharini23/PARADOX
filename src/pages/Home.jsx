@@ -81,7 +81,7 @@ export default function Home() {
               We make our clients a ton of money through Meta ads that steal the show and minimalist campaign structures that scale sustainably.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button href="#contact" variant="primary" className="px-7 py-4 text-base font-bold shadow-md">
+              <Button href="#contact" variant="primary" className="px-7 py-4 text-base font-bold">
                 Get Free Case Study <ArrowRight className="h-5 w-5" />
               </Button>
               <Button href="#why-us" variant="secondary" className="px-7 py-4 text-base font-bold">
@@ -178,7 +178,7 @@ export default function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                value: '₹5Cr+',
+                value: '₹50L+',
                 label: 'Generated Revenue',
                 desc: 'Generated in revenue through Meta Ads for lead magnet as well as direct selling acquisition funnels.',
               },
@@ -418,11 +418,11 @@ export default function Home() {
                   <p className="text-xs font-bold text-primary uppercase mt-1">Founder & Performance Director</p>
                 </div>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Sujitha is an online advertising expert who has documented success stories across 14+ different niches. After personally generating over ₹1 Crore within 15 months from a single digital product funnel, Sujitha co-founded House of Roas LLP (operating as PARADOX) to execute these identical, battle-tested strategies for other course creators, coaches, and high-ticket service providers.
+                  Sujitha is an online advertising expert who has documented success stories across 14+ different niches. After personally generating over ₹10 Lakhs within 15 months from a single digital product funnel, Sujitha co-founded House of Roas LLP (operating as PARADOX) to execute these identical, battle-tested strategies for other course creators, coaches, and high-ticket service providers.
                 </p>
                 <div className="flex gap-4 text-xs font-bold text-slate-400">
                   <span className="flex items-center gap-1">✓ 14+ Niches Served</span>
-                  <span className="flex items-center gap-1">✓ ₹3Cr+ Combined Ad Results</span>
+                  <span className="flex items-center gap-1">✓ ₹30L+ Combined Ad Results</span>
                 </div>
               </div>
             </div>

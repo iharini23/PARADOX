@@ -32,7 +32,11 @@ export default function Portfolio() {
             key={category}
             type="button"
             onClick={() => setActiveCategory(category)}
-            className={`rounded-full px-4 py-2 text-sm transition ${activeCategory === category ? 'bg-gradient-to-r from-primary to-secondary text-white' : 'bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white'}`}
+            className={`px-5 py-2 text-sm font-bold uppercase border-2 border-black rounded-none transition-all duration-200 ${
+              activeCategory === category
+                ? 'bg-primary text-white shadow-[2px_2px_0px_#000000] translate-x-[2px] translate-y-[2px]'
+                : 'bg-white text-black shadow-[4px_4px_0px_#000000] hover:shadow-[2px_2px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px]'
+            }`}
           >
             {category}
           </button>

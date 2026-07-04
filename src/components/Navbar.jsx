@@ -45,18 +45,18 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#contact" className="px-5 py-2.5 text-xs uppercase tracking-wider font-bold shadow-sm">
+          <Button href="#contact" className="px-5 py-2.5 text-xs uppercase tracking-wider font-bold">
             Get Access
           </Button>
         </div>
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200/80 bg-white/80 text-slate-700 hover:bg-slate-50 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center border-2 border-black bg-white text-black shadow-[2px_2px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[0px_0px_0px_#000000] transition-all duration-150 lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label="Toggle navigation menu"
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {open ? <X className="h-5 w-5" strokeWidth={2.5} /> : <Menu className="h-5 w-5" strokeWidth={2.5} />}
         </button>
       </div>
 

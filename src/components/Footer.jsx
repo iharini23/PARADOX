@@ -1,72 +1,47 @@
-import { Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
-import { navigationLinks } from '../data/navigation';
-import Logo from './Logo';
+import { MessageCircle } from 'lucide-react';
 
-const socialLinks = [
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-  { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
-];
+const WhatsAppIcon = ({ className }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    width="1em"
+    height="1em"
+  >
+    <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.76.457 3.48 1.328 5.004L2 22l5.132-1.346c1.47.8 3.12 1.222 4.866 1.226h.004c5.504 0 9.988-4.48 9.988-9.988C22 4.482 17.518 2 12.012 2zm0 17.416h-.002c-1.562-.002-3.096-.42-4.436-1.21l-.318-.19-3.3 1.15.894-3.412-.208-.332c-.868-1.38-1.326-2.978-1.326-4.636 0-4.836 3.936-8.772 8.772-8.772 2.342.002 4.544.914 6.2 2.574 1.656 1.66 2.566 3.864 2.566 6.196.002 4.838-3.934 8.776-8.766 8.776z" />
+  </svg>
+);
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t border-slate-900">
-      <div className="section-shell py-16 grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr] items-start">
-        <div className="space-y-6">
-          {/* Render our clean Logo component with the new branding */}
-          <Logo />
-
-          <p className="max-w-md text-sm leading-relaxed text-slate-400">
-            PARADOX (operated by House of Roas LLP) is a conversion-focused performance marketing agency. We design, script, write, and manage high-ROI acquisition systems.
-          </p>
-
-          <div className="flex flex-wrap gap-2.5">
-            {socialLinks.map((social) => {
-              const Icon = social.icon;
-              return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-400 transition hover:border-primary/50 hover:bg-primary/10 hover:text-white"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              );
-            })}
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-5">Quick Navigation</h3>
-          <ul className="space-y-3 text-sm font-semibold">
-            {navigationLinks.map((link) => (
-              <li key={link.path}>
-                <a className="transition hover:text-white" href={link.path}>
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-5">Our Philosophy</h3>
-          <p className="text-sm leading-relaxed text-slate-400">
-            We operate under a simple principle: generate more value than we charge. No lock-in, fully attribution-audited campaigns.
-          </p>
-          <div className="mt-4 p-4 rounded-xl border border-white/5 bg-white/5 text-xs text-slate-500 leading-relaxed">
-            LLP Registration: House of Roas LLP. Gurugram, Haryana.
+    <footer>
+      {/* "GOT A QUERY?" Section */}
+      <div className="bg-[#e5e1da] py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl bg-[#f5f3ef] border border-black/5 py-16 px-6 text-center rounded-sm">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-wider text-black mb-8">
+            GOT A QUERY?
+          </h2>
+          <div className="flex justify-center">
+            <a
+              href="https://wa.me/918072042580"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-white text-black font-bold uppercase text-base sm:text-lg border-2 border-black px-6 py-3.5 rounded-none shadow-[4px_4px_0px_#000000] hover:shadow-[0px_0px_0px_#000000] hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-200"
+            >
+              <span className="inline-flex items-center justify-center p-1 border border-black mr-3 bg-black text-white">
+                <WhatsAppIcon className="w-4.5 h-4.5" />
+              </span>
+              GET IN TOUCH
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-white/5 py-6 bg-slate-950">
-        <div className="section-shell flex flex-col gap-3 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>Copyright &copy; {new Date().getFullYear()} | PARADOX (House of Roas LLP). All rights reserved.</p>
-          <p>Modeled after impactxl.in design system.</p>
-        </div>
+      {/* Black Bottom Copyright Bar */}
+      <div className="bg-black py-6 text-center border-t border-neutral-900">
+        <p className="text-xs sm:text-sm text-neutral-500 font-medium">
+          Copyright &copy; {new Date().getFullYear()} | PARADOX
+        </p>
       </div>
     </footer>
   );
